@@ -1,6 +1,10 @@
 const gnb = document.querySelector(".main_gnb_container");
 const gnbDep1Menu = document.querySelectorAll(".menu");
 const gnbDep2Menu = document.querySelectorAll(".dep2_menu_area");
+const mobileGnbCloseBtn = document.querySelector(".m_close_btn");
+const mobileGnbOpenBtn = document.querySelector(".mobile_menu_button");
+const mobileGnbWrapper = document.querySelector(".m_nav_wrapper");
+const mobileBackground = document.querySelector(".m_bg");
 
 const aboutUsSection = document.querySelector(".about_us_section");
 
@@ -48,6 +52,30 @@ for (let i = 0; i < gnbDep1Menu.length; i++) {
   gnbDep1Menu[i].addEventListener("mouseover", menuOpen);
   gnbDep1Menu[i].addEventListener("mouseleave", menuClose);
 }
+
+// 모바일 메뉴 온오프
+mobileGnbCloseBtn.addEventListener("click", () => {
+  mobileGnbWrapper.classList.add("off");
+  setTimeout(() => {
+    mobileGnbWrapper.style.display = `none`;
+  }, 500);
+
+  mobileBackground.style.display = `none`;
+
+  document.body.classList.remove("no-scroll");
+});
+
+mobileGnbOpenBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    mobileGnbWrapper.classList.remove("off");
+  }, 1);
+
+  mobileGnbWrapper.style.display = `flex`;
+
+  mobileBackground.style.display = `block`;
+
+  document.body.classList.add("no-scroll");
+});
 
 window.addEventListener("scroll", () => {
   if (scrollY < window.scrollY) {
