@@ -58,6 +58,7 @@ mobileGnbCloseBtn.addEventListener("click", () => {
   mobileGnbWrapper.classList.add("off");
   setTimeout(() => {
     mobileGnbWrapper.style.display = `none`;
+    mobileGnbWrapper.style.position = "relative";
   }, 500);
 
   mobileBackground.style.display = `none`;
@@ -70,6 +71,7 @@ mobileGnbOpenBtn.addEventListener("click", () => {
     mobileGnbWrapper.classList.remove("off");
   }, 1);
 
+  mobileGnbWrapper.style.position = "fixed";
   mobileGnbWrapper.style.display = `flex`;
 
   mobileBackground.style.display = `block`;

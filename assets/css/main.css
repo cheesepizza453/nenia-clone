@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+.m_nav_wrapper {
+  display: none;
+}
+
 .only_mobile,
 .only_tablet {
   display: none;
@@ -707,118 +711,6 @@ a {
   }
 }
 
-.m_bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-}
-
-.m_nav_wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 1001;
-  transition: all 0.5s ease;
-}
-
-.m_nav_wrapper.on {
-  transform: translateY(0);
-}
-
-.m_nav_wrapper.off {
-  transform: translateY(-100%);
-  transition: all 0.5s ease;
-}
-
-.m_nav_wrapper nav {
-  position: relative;
-  width: 94vw;
-  height: 90vh;
-  background: #faf3e6;
-  border-radius: 0 0 1.5rem 1.5rem;
-}
-
-.m_nav_container {
-  width: 100%;
-  height: 100%;
-  padding: 8vw 5vw;
-}
-
-.m_menu {
-  margin-bottom: 2rem;
-}
-
-.m_dep1_menu {
-  color: #154726;
-  font-weight: 700;
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-}
-
-.m_dep2_menu {
-  margin: 10px 0 10px 10px;
-}
-
-.m_dep2_menu a {
-  color: #149473;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.m_close_btn {
-  position: absolute;
-  top: calc(8vw - 5px);
-  right: calc(5vw + 6px);
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.m_close_btn:before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 6px;
-  width: 30px;
-  height: 4px;
-  background: #154726;
-  transform: rotate(45deg);
-  transform-origin: top left;
-}
-
-.m_close_btn:after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: -6px;
-  width: 30px;
-  height: 4px;
-  background: #154726;
-  transform: rotate(-45deg);
-  transform-origin: top right;
-}
-
-.m_nav_wrapper .footer_btn_area {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  bottom: 5vh;
-}
-.m_nav_wrapper .footer_btn_area a {
-  margin: 0 5px;
-}
-
 @media (max-width: 1023px) {
   html {
     font-size: 12px;
@@ -1124,6 +1016,119 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
+  }
+
+  .m_bg {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .m_nav_wrapper {
+    position: relative;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    z-index: 1001;
+    transition: all 0.5s ease;
+  }
+
+  .m_nav_wrapper.on {
+    transform: translateY(0);
+  }
+
+  .m_nav_wrapper.off {
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .m_nav_wrapper nav {
+    position: relative;
+    width: 94vw;
+    height: 90vh;
+    background: #faf3e6;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+
+  .m_nav_container {
+    width: 100%;
+    height: 100%;
+    padding: 8vw 5vw;
+  }
+
+  .m_menu {
+    margin-bottom: 2rem;
+  }
+
+  .m_dep1_menu {
+    color: #154726;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .m_dep2_menu {
+    margin: 10px 0 10px 10px;
+  }
+
+  .m_dep2_menu a {
+    color: #149473;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .m_close_btn {
+    position: absolute;
+    top: calc(8vw - 5px);
+    right: calc(5vw + 6px);
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .m_close_btn:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 30px;
+    height: 4px;
+    background: #154726;
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+
+  .m_close_btn:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -6px;
+    width: 30px;
+    height: 4px;
+    background: #154726;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+
+  .m_nav_wrapper .footer_btn_area {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 5vh;
+  }
+  .m_nav_wrapper .footer_btn_area a {
+    margin: 0 5px;
   }
 }
 
