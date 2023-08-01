@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Pretendard";
+}
+
 body.no-scroll {
   overflow: hidden !important;
 }
@@ -113,7 +117,7 @@ a {
   padding: 2rem 1.25rem;
   background: #154726;
   color: #fff;
-  border-radius: 1.25rem;
+  border-radius: 1.875rem;
   transform: translateX(-50%);
 }
 
@@ -195,6 +199,7 @@ a {
   height: 100vh;
   background: url("../img/visual_img.jpg") no-repeat;
   background-position: center;
+  background-size: cover;
   z-index: -1;
 }
 
@@ -235,16 +240,26 @@ a {
 /* about us */
 .about_us_section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 83.4%;
   margin-top: 7.5rem;
   background: #faf3e6;
-  padding: 6.25rem 5rem;
-  border-radius: 1.25rem;
+  padding: 6.25rem 0;
+  border-radius: 1.875rem;
   transition: all 0.3s ease-in;
 }
+
+.about_us_inner {
+  display: flex;
+  justify-content: center;
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 4%;
+}
+
 .about_us_text_area {
   width: 50%;
+  height: 80%;
 }
 
 .about_us_video_area {
@@ -279,6 +294,7 @@ a {
   height: 1.125rem;
   margin-left: 0.3125rem;
   background: url("../img/viewmore.png") no-repeat;
+  background-size: contain;
 }
 
 .about_us_video_thum {
@@ -304,6 +320,11 @@ a {
   font-weight: bold;
   border-radius: 3.125rem;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.about_us_video_btn:hover {
+  background-color: #ffc612;
 }
 
 .about_us_video_btn:before {
@@ -327,7 +348,8 @@ a {
   padding: 10.625rem 0;
   margin-top: -1.25rem;
   background: url("../img/main2_bak.jpg") no-repeat;
-  background-position-y: -21.875rem;
+  background-size: cover;
+  background-position-y: -10vh;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
@@ -363,7 +385,7 @@ a {
   display: flex;
   height: 100%;
   align-items: center;
-  padding: 7vw 0 7vw 7vw;
+  padding: 7vw 0 7vw 10vw;
 }
 
 .business_text_area {
@@ -371,6 +393,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
+  height: 90%;
   margin-right: 15vw;
 }
 
@@ -405,27 +428,40 @@ a {
   max-height: 26.25rem;
   margin-bottom: 2.5rem;
   border-radius: 3vw;
+  transition: all 0.6s;
 }
 
 .business_brands_area .business_brand:nth-child(1) .business_brand_img {
   background: url("../img/main4_img1.png") no-repeat;
   background-position: center;
   background-size: contain;
+  background-size: 100%;
 }
+
 .business_brands_area .business_brand:nth-child(2) .business_brand_img {
   background: url("../img/main4_img2.png") no-repeat;
   background-position: center;
   background-size: contain;
+  background-size: 100%;
 }
 .business_brands_area .business_brand:nth-child(3) .business_brand_img {
   background: url("../img/main4_img3.png") no-repeat;
   background-position: center;
   background-size: contain;
+  background-size: 100%;
 }
 .business_brands_area .business_brand:nth-child(4) .business_brand_img {
   background: url("../img/main4_img4.png") no-repeat;
   background-position: center;
   background-size: contain;
+  background-size: 100%;
+}
+
+.business_brands_area .business_brand:nth-child(1) .business_brand_img:hover,
+.business_brands_area .business_brand:nth-child(2) .business_brand_img:hover,
+.business_brands_area .business_brand:nth-child(3) .business_brand_img:hover,
+.business_brands_area .business_brand:nth-child(4) .business_brand_img:hover {
+  background-size: 115%;
 }
 
 .business_brand_logo {
@@ -537,7 +573,7 @@ a {
 }
 
 .item_text_container .item {
-  margin-bottom: 40vh;
+  margin-bottom: 40%;
 }
 
 .item_name {
@@ -685,31 +721,6 @@ a {
   font-size: 0.6875rem;
   margin-top: 3.125rem;
 }
-@media (max-width: 480px) {
-  .main_wrap .main_visual_title {
-    font-size: 2.05rem;
-  }
-
-  .about_us_section .content_subtext {
-    font-size: 2.35rem;
-  }
-
-  .business_section .content_subtext {
-    font-size: 2.35rem;
-  }
-
-  .appeal_section .appeal_text_area {
-    font-size: 1.8rem;
-  }
-
-  .items_section .content_subtext {
-    font-size: 2.35rem;
-  }
-
-  .footer .footer_bottom {
-    padding: 1.8rem;
-  }
-}
 
 @media (max-width: 1023px) {
   html {
@@ -791,6 +802,7 @@ a {
   .main_gnb_container .gnb_btn_area {
     display: none;
   }
+
   /* main visual */
   .main_visual_text_container {
     max-width: 100%;
@@ -803,6 +815,7 @@ a {
     line-height: 1.3;
   }
 
+  /* about us */
   .about_us_text_area {
     width: 100%;
   }
@@ -811,17 +824,21 @@ a {
     width: 100%;
   }
 
+  .about_us_video_thum {
+    height: 31rem;
+  }
+
   .content_subtext {
     font-size: 2.75rem;
     margin-bottom: 2rem;
     margin-left: 0;
+    font-weight: 300;
   }
 
   .about_us_text_area_bottom {
     margin-bottom: 2rem;
   }
 
-  /* about us */
   .main_wrap .about_us_section {
     width: 100% !important;
     padding: 5rem 2rem;
@@ -830,6 +847,13 @@ a {
 
   .about_us_section {
     flex-direction: column;
+  }
+
+  .about_us_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
   }
 
   /* appeal */
@@ -915,6 +939,7 @@ a {
   .items_inner {
     height: 100%;
     position: relative !important;
+    transform: translate(0, 0) !important;
   }
 
   .items_section .item_img_container {
@@ -1018,6 +1043,7 @@ a {
     margin-bottom: 3rem;
   }
 
+  /* mobile menu */
   .m_bg {
     position: fixed;
     display: none;
@@ -1053,7 +1079,7 @@ a {
   .m_nav_wrapper nav {
     position: relative;
     width: 94vw;
-    height: 90vh;
+    height: 80vh;
     background: #faf3e6;
     border-radius: 0 0 1.5rem 1.5rem;
   }
@@ -1061,7 +1087,7 @@ a {
   .m_nav_container {
     width: 100%;
     height: 100%;
-    padding: 8vw 5vw;
+    padding: 2.8rem;
   }
 
   .m_menu {
@@ -1087,8 +1113,8 @@ a {
 
   .m_close_btn {
     position: absolute;
-    top: calc(8vw - 5px);
-    right: calc(5vw + 6px);
+    top: 2rem;
+    right: 2rem;
     width: 36px;
     height: 36px;
     border: none;
@@ -1179,5 +1205,40 @@ a {
   }
   .footer_top_inner {
     padding: 0 5rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .items_section {
+    height: 900vh;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+  .main_wrap .main_visual_title {
+    font-size: 2.05rem;
+  }
+
+  .about_us_section .content_subtext {
+    font-size: 2.35rem;
+  }
+
+  .business_section .content_subtext {
+    font-size: 2.35rem;
+  }
+
+  .appeal_section .appeal_text_area {
+    font-size: 1.8rem;
+  }
+
+  .items_section .content_subtext {
+    font-size: 2.35rem;
+  }
+
+  .footer .footer_bottom {
+    padding: 1.8rem;
   }
 }

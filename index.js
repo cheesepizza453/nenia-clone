@@ -90,7 +90,7 @@ window.addEventListener("scroll", () => {
     // about영역
     const scrollDistance = window.scrollY + window.innerHeight;
     const aboutSectionTop = aboutUsSection.offsetTop + 100;
-    const aboutSectionBottom = aboutSectionTop + aboutUsSection.offsetHeight - 100;
+    const aboutSectionBottom = aboutSectionTop + aboutUsSection.offsetHeight - 300;
     const aboutScrollRange = aboutSectionBottom - aboutSectionTop;
 
     if (scrollDistance > aboutSectionTop) {
@@ -110,9 +110,9 @@ window.addEventListener("scroll", () => {
       scrollDistance < appealSectionBottom + window.innerHeight / 2
     ) {
       if (scrollY < window.scrollY) {
-        appealSection.style.backgroundPositionY = `-400px`;
+        appealSection.style.backgroundPositionY = `-15vh`;
       } else {
-        appealSection.style.backgroundPositionY = `-300px`;
+        appealSection.style.backgroundPositionY = `-10vh`;
       }
     }
 
@@ -145,7 +145,7 @@ window.addEventListener("scroll", () => {
       itemsInner.style.top = "0";
       itemsInner.style.left = "0";
       itemsInner.style.transform = "translate(0,0)";
-      itemsText.style.transform = `translate(0,-${(window.scrollY - itemsSectionTop) * 0.45}px)`;
+      itemsText.style.transform = `translate(0,-${(window.scrollY - itemsSectionTop) * 0.49}px)`;
 
       if (scrollDistance > itemsSectionTop + window.innerHeight * 2) {
         itemImg2.style.transform = `translate(0, 0%)`;
